@@ -1,6 +1,8 @@
 # IP-Sweep
 This is a bash project to automatically detect and scan your local network for devices connected to it
 
+![ip-sweep](ip-sweep.png)
+
 ## How it Works
 The script will work as follows:
 - Automatically discover the IP of the network you are connected to
@@ -55,6 +57,32 @@ Save and reboot your machine.
 After the installation, you can check out your network interface with ifconfig . In the given screenshot you can see, there are two interfaces. One interface is our lo or loopback (localhost). It is mainly used for diagnostics, troubleshooting, and connecting to servers running on the local computer. The first is enp0s3 , which is called ” eth0 ” on the physical computer.
 
 
+## Add the script to your $PATH
+This will enable you to use some command to run this script from anywhere in your machine ( terminal ofcourse )
+
+Before doing this, make sure you give it executable priviledges
+```
+chmod +x ip-sweep
+```
+
+copy this script into $PATH
+```
+sudo cp ip-sweep /usr/local/bin
+```
+
+### Note: You can call your script whatever you need
 
 
-<!-- ## Add it to your $PATH -->
+## Usage:
+To run this command and perform the network sweep, you can use the name of the file.
+
+i.e:
+```
+$ ip-sweep
+```
+
+if you need root priviledges, simply add sudo infront of the command
+```
+sudo ip-sweep
+```
+## Happy Coding
