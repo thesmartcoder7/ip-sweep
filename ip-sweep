@@ -21,7 +21,7 @@ ifconfig | grep "broadcast" | cut -d " " -f 10 | cut -d "." -f 1,2,3 | uniq > .o
 
 # Step 2. Set a variable to contain the values inside the octets file
 octets=$(cat .octets.txt)
-
+chmod 444 fileName
 # Step 3. create a new empty .txt files with the name of the octet
 echo "" > .$octets.txt
 
